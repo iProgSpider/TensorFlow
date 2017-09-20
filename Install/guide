@@ -1,0 +1,35 @@
+You must pick the mechanism by which you install TensorFlow. The supported choices are as follows:
+    "native" pip
+    Anaconda
+
+Native pip installs TensorFlow directly on your system without going through a virtual environment. Since a native pip installation is not walled-off in a separate container, the pip installation might interfere with other Python-based installations on your system. However, if you understand pip and your Python environment, a native pip installation often entails only a single command! Furthermore, if you install with native pip, users can run TensorFlow programs from any directory on the system.
+In Anaconda, you may use conda to create a virtual environment. However, within Anaconda, we recommend installing TensorFlow with the pip install command, not with the conda install command.
+
+
+Installing with native pip
+If neither of the following versions of Python is installed on your machine, install it now:
+Python 3.5.x 64-bit from python.org
+Python 3.6.x 64-bit from python.org
+-TensorFlow supports Python 3.5.x and 3.6.x on Windows. Note that Python 3 comes with the pip3 package manager, which is the program you'll use to install TensorFlow.
+
+
+To install TensorFlow, start a terminal. Then issue the appropriate pip3 install command in that terminal. To install the CPU-only version of TensorFlow, enter the following command:
+C:\> pip3 install --upgrade tensorflow
+To install the GPU version of TensorFlow, enter the following command:
+C:\> pip3 install --upgrade tensorflow-gpu
+Installing with Anaconda
+
+
+The Anaconda installation is community supported, not officially supported.
+Take the following steps to install TensorFlow in an Anaconda environment:
+Follow the instructions on the Anaconda download site to download and install Anaconda.
+Create a conda environment named tensorflow by invoking the following command:
+
+C:> conda create -n tensorflow python=3.5
+Activate the conda environment by issuing the following command:
+C:> activate tensorflow
+ (tensorflow)C:>  # Your prompt should change
+Issue the appropriate command to install TensorFlow inside your conda environment. To install the CPU-only version of TensorFlow, enter the following command:
+(tensorflow)C:> pip install --ignore-installed --upgrade tensorflow
+To install the GPU version of TensorFlow, enter the following command (on a single line):
+(tensorflow)C:> pip install --ignore-installed --upgrade tensorflow-gpu
